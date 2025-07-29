@@ -1,66 +1,70 @@
 # LOGO! PLC Project: Dual-Function Pushbutton Control
 
-**Control two outputs (Q1 & Q2) with one momentary pushbutton using press duration logic.**
-*(Siemens LOGO!Soft Comfort V8.4 - FBD Programming)*
+**Control two outputs (Q1 & Q2) with one momentary pushbutton (I1) using press duration logic.**
+
+## 🖥️ LOGO!Soft FBD program
+![FBD Logic Diagram](FBD_screenshot.png)
 
 ---
 
 ## 📌 Overview
-This project toggles **Q1** on a **short press** (<1s) and **Q2** on a **long press** (≥1s) of Input 1 (momentary PB). Ideal for multi-function controls.
+This project toggles **Q1** on a **short press** (<1s) and **Q2** on a **long press** (≥1s) of Input 1.
+
+Useful for:
+- Multi-mode equipment control (e.g: jog/continuous operation, auto/manual)
+- Dual-function interfaces (e.g: short press for light, long press for fan)
+- Space-constrained control panels
+- Safety interlocks where press duration matters
 
 ---
 
-## 🧩 Required Blocks & Their Roles
+## 🧩 Required Blocks & Roles
 
-| Block Type          | Symbol | Purpose                                                |
-|---------------------|--------|--------------------------------------------------------|
-| **Digital Input**   | `I1`   | Momentary pushbutton input (NO contact)                |
-| **Edge Detection**  | `B005` | Detects rising edge of I1 to trigger short-press logic |
-| **AND Gate**        | `B004` | Combines edge detection + PB state for clean signal    |
-| **Pulse Relay**     | `RS`   | Toggles Q1 on short presses (reset on release)         |
-| **On-Delay Timer**  | `TON`  | Measures press duration; toggles Q2 if ≥1s             |
-| **Output Coils**    | `Q1/Q2`| Physical/logical outputs controlled by the logic       |
+| Block Type          | Symbol ID   | Purpose                                             |
+|---------------------|-------------|-----------------------------------------------------|
+| **Digital Input**   | `I1`        | Momentary pushbutton input (NO contact)             |
+| **NAND Edge**       | `B005`      | Rising edge detection with timer lockout            |
+| **AND Gate**        | `B004`      | Combines edge detection + PB state + timer feedback |
+| **NOT Gates**       | `B006/B007` | Isolates timer feedback paths                       |
+| **Pulse Relay**     | `B001/B002` | Toggle logic with auto-reset                        |
+| **On-Delay Timer**  | `B003`      | 1-second timer (Ta=01.00s)                          |
+| **Output Coils**    | `Q1/Q2`     | Physical outputs                                    |
 
 ---
 
 ## 🔌 Connection Guide
 
 ### 1. **Short-Press Path (Q1 Toggle)**
-I1 → Edge Detector (B005) → AND (B004) → RS Flip-Flop → Q1
-- *Why?* The edge detector ensures only the initial press (not hold) triggers Q1.
+<pre>
+I1 → NAND Edge (B005) → AND (B004) → Pulse Relay (B001) → Q1
+   ↑                  ↑
+   └──B007(NOT)       └──B006(NOT)
+</pre>
 
 ### 2. **Long-Press Path (Q2 Toggle)**
-I1 → On-Delay Timer (TON, 1s) → Q2
-- *Why?* The timer ignores short presses but activates after 1 second.
-
-### 3. **Interlocking Logic**
-- The **AND gate** prevents Q1 toggle if the timer is active (long press).
-- The **Pulse Relay** resets on button release (`Rem = off`).
-
----
-
-## ⚙️ Gate/Block Explainer
-
-### 🔹 **Edge Detector (B005 - NAND)**
-- **Function**: Outputs a pulse only when I1 changes from 0→1 (rising edge).
-- **Why?** Ensures Q1 toggles exactly once per press, not during hold.
-
-### 🔹 **AND Gate (B004)**
-- **Inputs**: Edge pulse (B005) + I1 state.
-- **Why?** Combines edge and PB state to filter noise/debounce.
-
-### 🔹 **Pulse Relay**
-- **Set (S)**: AND gate output.
-- **Reset (R)**: Button release (inverse of I1).
-- **Why?** Maintains Q1 state until next short press.
-
-### 🔹 **On-Delay Timer (TON)**
-- **Preset**: 1000 ms (1s).
-- **Why?** Delays Q2 activation until long-press is confirmed.
+<pre>
+I1 → On-Delay Timer (B003) → Pulse Relay (B002) → Q2
+                           ↓
+                           ├──B007 (NOT) → B005 (NAND Edge)
+                           └──B006 (NOT) → B004 (AND)
+</pre>
 
 ---
 
-## 🖥️ Screenshot of FBD
-![FBD Logic Diagram](FBD_screenshot.png)
+## ⚙️ Why NOT blocks?
 
-*LOGO! FBD program for dual-output pushbutton control.*
+### **B007 Path (Edge Detector Control)**
+| Timer Output | B007 Output | B005 Effect               |
+|--------------|-------------|---------------------------|
+| Active (1)   | 0           | Disables edge detection   |
+| Inactive (0) | 1           | Enables edge detection    |
+
+### **B006 Path (AND Gate Control)**
+| Timer Output | B006 Output | B004 Effect               |
+|--------------|-------------|---------------------------|
+| Active (1)   | 0           | Forces AND output low     |
+| Inactive (0) | 1           | Allows normal AND operation |
+
+*Key Insight: The NOT blocks create "active-low" control signals that safely isolate the timer's feedback paths. Ideally the NOT blocks can be removed & the inputs of the NAND & AND blocks inverted (by double clicking thier inputs) - but for this project, NOT blocks are used for clarity*
+
+---
