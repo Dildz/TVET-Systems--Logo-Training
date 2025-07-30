@@ -25,12 +25,12 @@ Useful for:
 
 ## 🧩 Required Blocks & Roles
 
-| Block Type           | Symbol ID                      | Purpose                                                  |
-|-------------------- -|--------------------------------|----------------------------------------------------------|
-| **Digital Inputs**   | `I1, I2, I3, I4, I5`           | Momentary pushbutton input (NO contact)                  |
-| **NOT Gates**        | `B006, B007`                   | Invert the states of an interlocking signals.            |
-| **AND Gates**        | `B001, B002, B003, B004, B005` | Combine the input signals with the interlocking signals. |
-| **Output Coils**     | `Q1, Q2, Q3, Q4, Q5`           | Physical outputs.                                        |
+| Block Type          | Symbol ID                  | Purpose                                                  |
+|---------------------|----------------------------|----------------------------------------------------------|
+| **Digital Input**   | `I1/I2/I3/I4/I5`           | Momentary pushbutton inputs (NO contact)                 |
+| **AND Gate**        | `B001/B002/B003/B004/B005` | Combine the input signals with the interlocking signals. |
+| **NOT Gates**       | `B006/B007`                | Invert the states of an interlocking signals.            |
+| **Output Coils**    | `Q1/Q2/Q3/Q4/Q5`           | Physical outputs.                                        |
 
 ---
 
@@ -46,8 +46,6 @@ Useful for:
           ↑
           └──I2
   </pre>
-
-
 
 - **Motor "DOWN" (Q2) Path:**
   <pre>
