@@ -11,3 +11,4 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
 - controlling_two_outputs_with_one_pushbutton
 - interlocking_circuit
 - step_control_for_4_outputs
+- basic_arithmetic_operations
