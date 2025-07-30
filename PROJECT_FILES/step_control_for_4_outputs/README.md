@@ -91,10 +91,13 @@ Useful for:
 
 The system controls the activation of four outputs (Q1, Q2, Q3, Q4) in a sequential manner, initiated by a momentary pushbutton.
 
-- **Initiation:** Pressing the `Pushbutton (I1)` triggers `B001 (Pulse Relay)` and `B002 (Pulse Relay)`.
-- **First Stage:** `B001`'s output (B001/2) feeds into `B003 (AND)` and `B004 (AND)`. These AND gates, combined with interlocks, control `Q1` and `Q2`.
-- **Second Stage:** The system progresses to `B002 (Pulse Relay)`. Its output (B002/2) feeds into `B005 (AND)` and `B006 (NOR)`, controlling `Q3` and `Q4`.
-- **Interlocking:** The AND and NOR gates, along with feedback connections, ensure that outputs are activated sequentially and that conflicting outputs are not active simultaneously. This prevents undesired states and ensures proper system operation. For example, a `NOR` gate for `Q4` would ensure `Q4` is only active if *neither* of its inputs (including potential interlocks from other outputs) are true.
+- **Initiation:** Pressing the `Pushbutton (I1)` triggers `B001 (Pulse Relay)`, which then triggers `B002 (Pulse Relay)`.
+- **First Stage:** `B001's (Pulse Relay)` output feeds into inverted `B004 (AND)` input and `B006 (XOR)`. These gates, combined with interlocks, control `Q2` and `Q4`.
+- **Second Stage:** `B002's (Pulse Relay)` output feeds into `B003 (AND)` and into inverted `B005 (AND)` input. These AND gates, combined with interlocks, control `Q1` and `Q3`.
+
+
+- **Interlocking:** The AND and NOR gates, along with feedback connections, ensure that outputs are activated sequentially and that conflicting outputs are not active simultaneously. For example, a `NOR` gate for `Q4` would ensure `Q4` is only active if *neither* of its inputs (including potential interlocks from other outputs) are true.
+
 - **Initialization and Reset:** The `M8 (Init Flag)` sets `B007 (Latching Relay)` at startup, establishing an initial state. When `Q1` becomes active, it resets `B007`, indicating the start of the primary sequence. This mechanism ensures the system begins from a defined state.
 
 *Key Insight: The use of pulse relays ensures momentary activation signals, and the combination of AND and NOR gates, along with the latching relay, manages the sequential progression and maintains interlocks for a robust step control system.*
