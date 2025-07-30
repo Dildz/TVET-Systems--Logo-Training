@@ -4,6 +4,7 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
 ## Project Requirements:
 - LOGO!Soft Comfort v8.4
 - LOGO! 12/24RCE PLC
+- LOGO! DM8 12/24R expansion module
 - LOGO! TDE Display
 
 ## Project List:
