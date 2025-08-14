@@ -11,5 +11,9 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
 - LOGO!12/24RCE_BREAKOUT_BOARD
 - controlling_two_outputs_with_one_pushbutton
 - interlocking_circuit
+- light_switching_circuits
+  - 2-way_switching_circuit
+  - 3-way_switching_circuit
+  - stairway_function_switching_circuit
 - step_control_for_4_outputs
 - basic_arithmetic_operations
