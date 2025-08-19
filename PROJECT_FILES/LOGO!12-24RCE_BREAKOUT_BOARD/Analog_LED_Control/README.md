@@ -13,11 +13,11 @@
 ---
 
 ## 📌 Overview
-This project demonstrates controlling the state of different colored LEDs based on the input from a **0-10V analog potentiometer** using LOGO!Soft. The core logic is split into two sections: **Analog Input Processing** and **Output Control**. The analog input from the potentiometer is scaled and then used to trigger different outputs at various voltage ranges.
+This project demonstrates controlling the state of different coloured LEDs based on the input from a **0-10V analog potentiometer** using LOGO!Soft. The core logic is split into two sections: **Analog Input Processing** and **Output Control**. The analog input from the potentiometer is scaled and then used to trigger different outputs at various voltage ranges.
 
 Useful for:
-- Creating a visual feedback system where LED colors change based on a continuous analog input.
-- Basic PLC control system for pumps, fans, mixers, lights, etc.
+- Creating a visual feedback system where LED colours change based on a continuous analog input.
+- Basic PLC control system for pumps, fans, mixers, tower-lights, etc.
 
 ---
 
@@ -54,3 +54,4 @@ Two **ON-DELAY Timers** (`B007` and `B008`) are used to create a flashing effect
 
 
 *Key Insight: The combination of these two 0.50s ON-DELAY timers creates a blinking effect with a 50% duty cycle, ensuring the blue LED flashes as long as the scaled analog input remains below 1% by resetting each others triggers.*
+
