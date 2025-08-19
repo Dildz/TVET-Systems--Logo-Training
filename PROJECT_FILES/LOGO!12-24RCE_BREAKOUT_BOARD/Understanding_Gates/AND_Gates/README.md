@@ -87,6 +87,8 @@ De Morgan's theorem helps simplify complex logic by flipping gates "inside out."
 
 ## 📊 Truth Tables for AND Gate Configurations
 
+*open the LOGO! project, copy these into a text editor & complete the truth tables*
+
 ### **2-Input AND Gate (B004 → Q1)**
 | I1 | I2 | Q1 |
 |----|----|----|
@@ -163,3 +165,4 @@ De Morgan's theorem helps simplify complex logic by flipping gates "inside out."
 
 
 *Control Bit: _____*
+
