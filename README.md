@@ -6,6 +6,7 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
 - LOGO! 12/24RCE PLC
 - LOGO! DM8 12/24R expansion module
 - LOGO! TDE Display
+- TVET Systems Breakout-Board [FM250606]
 
 ## Project List:
 - LOGO!12-24RCE_BREAKOUT_BOARD
