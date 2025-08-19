@@ -1,6 +1,6 @@
 # LOGO! PLC Project: Analog LED Control
 
-**Control LED states via Analog inputs**
+**Control Digital outputs via an Analog input**
 
 ## 🖥️ LOGO!Soft FBD Programs
 
@@ -51,5 +51,6 @@ Two **ON-DELAY Timers** (`B007` and `B008`) are used to create a flashing effect
   - A memory flag `M60` is required to connect AND gate `B013` to TON2's trigger.
 - It has an on-delay of **0.5sec**.
 - The output of this timer is connected to an inverted **AND gate** (`B011`) input, which then controls the output for the blue LED (`Q2`).
+
 
 *Key Insight: The combination of these two 0.50s ON-DELAY timers creates a blinking effect with a 50% duty cycle, ensuring the blue LED flashes as long as the scaled analog input remains below 1% by resetting each others triggers.*
