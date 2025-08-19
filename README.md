@@ -8,7 +8,11 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
 - LOGO! TDE Display
 
 ## Project List:
-- LOGO!12/24RCE_BREAKOUT_BOARD
+- LOGO!12-24RCE_BREAKOUT_BOARD
+  - Analog_LED_Control
+  - Basic_IO_Control
+  - E-Stop_Circuit
+  - Understanding_Gates
 - basic_arithmetic_operations
 - controlling_two_outputs_with_one_pushbutton
 - interlocking_circuit
