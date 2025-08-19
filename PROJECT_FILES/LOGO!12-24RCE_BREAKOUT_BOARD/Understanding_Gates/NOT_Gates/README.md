@@ -87,11 +87,15 @@ The project questions challenge you to find equivalent circuits without NOT gate
 
 ## 📊 Truth Tables for Gate Configurations
 
+*open the LOGO! project, copy this document into a text editor & complete the truth tables*
+
 ### **Basic NOT Gate (B003 → Q1)**
 | I1 | Q1 |
 |----|----|
 | 0  |    |
 | 1  |    |
+
+*Control Bit: _____*
 
 ### **AND Gate with NOT (B006 → Q2)**
 | I2 | I3 | Q2 |
@@ -100,8 +104,9 @@ The project questions challenge you to find equivalent circuits without NOT gate
 | 0  | 1  |    |
 | 1  | 0  |    |
 | 1  | 1  |    |
-
 *Note: One input is inverted before the AND operation*
+
+*Control Bit: _____*
 
 ### **OR Gate with NOT (B007 → Q3)**
 | I4 | I5 | Q3 |
@@ -110,5 +115,6 @@ The project questions challenge you to find equivalent circuits without NOT gate
 | 0  | 1  |    |
 | 1  | 0  |    |
 | 1  | 1  |    |
-
 *Note: One input is inverted before the OR operation* 
+
+*Control Bit: _____*
