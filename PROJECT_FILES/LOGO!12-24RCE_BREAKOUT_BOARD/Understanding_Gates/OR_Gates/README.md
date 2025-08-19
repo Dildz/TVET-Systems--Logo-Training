@@ -24,14 +24,14 @@ This project demonstrates the implementation and behavior of different OR gate c
 
 ## 🧩 Required Blocks & Roles
 
-| Block Type           | Symbol ID   | Purpose                                         |
-|----------------------|-------------|-------------------------------------------------|
-| **Digital Inputs**   | `I1-I6`     | Switch inputs for gate testing.                 |
-| **OR Gate**          | `B003`      | Standard 2-input OR gate implementation.        |
-| **NOR Gate**         | `B004`      | NOR gate implementation.                        |
-| **XOR Gate**         | `B005`      | Exclusive OR gate implementation.               |
-| **Up/Down Counters** | `B012-B014` | Output behavior visualization.                  |
-| **Output Coils**     | `Q1-Q8`     | Physical outputs connected to display counters. |
+| Block Type           | Symbol ID           | Purpose                                         |
+|----------------------|---------------------|-------------------------------------------------|
+| **Digital Inputs**   | `I1/I2/I3/I4/I5/I6` | Switch inputs for gate testing.                 |
+| **OR Gate**          | `B003`              | Standard 2-input OR gate implementation.        |
+| **NOR Gate**         | `B004`              | NOR gate implementation.                        |
+| **XOR Gate**         | `B005`              | Exclusive OR gate implementation.               |
+| **Up/Down Counters** | `B012/B013/B014`    | Output behavior visualization.                  |
+| **Output Coils**     | `Q1/Q2/Q3`          | Physical outputs connected to display counters. |
 
 ---
 
@@ -61,6 +61,8 @@ The project demonstrates core OR gate principles through physical switches and v
 ---
 
 ## 📊 Truth Tables for OR Gate Configurations
+
+*open the LOGO! project, copy this document into a text editor & complete the truth tables*
 
 ### **OR Gate (B003 → Q1)**
 | I1 | I2 | Q1 |
