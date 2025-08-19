@@ -104,7 +104,7 @@ The project questions challenge you to find equivalent circuits without NOT gate
 | 0  | 1  |    |
 | 1  | 0  |    |
 | 1  | 1  |    |
-*Note: One input is inverted before the AND operation*
+- *Note: One input is inverted before the AND operation*
 
 *Control Bit: _____*
 
@@ -115,6 +115,7 @@ The project questions challenge you to find equivalent circuits without NOT gate
 | 0  | 1  |    |
 | 1  | 0  |    |
 | 1  | 1  |    |
-*Note: One input is inverted before the OR operation* 
+- *Note: One input is inverted before the OR operation* 
 
 *Control Bit: _____*
+
