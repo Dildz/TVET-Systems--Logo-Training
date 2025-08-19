@@ -24,14 +24,14 @@ This project demonstrates the implementation and behavior of different AND gate 
 
 ## 🧩 Required Blocks & Roles
 
-| Block Type           | Symbol ID   | Purpose                                             |
-|----------------------|-------------|-----------------------------------------------------|
-| **Digital Inputs**   | `I1-I8`     | Switch inputs for gate testing                      |
-| **AND Gates**        | `B004-B007` | Various AND gate implementations                    |
-| **NAND Gates**       | `B008-B011` | NAND gate implementations including edge-triggered. |
-| **Up/Down Counters** | `B012-B017` | Output behavior visualization.                      |
-| **Timer OFF Delays** | `B018-B019` | Timing functions (25s delay)                        |
-| **Output Coils**     | `Q1-Q8`     | Physical outputs connected to display counters.     |
+| Block Type           | Symbol ID                       | Purpose                                             |
+|----------------------|---------------------------------|-----------------------------------------------------|
+| **Digital Inputs**   | `I1/I2/I3/I4/I5/I6/I7/I8`       | Switch inputs for gate testing                      |
+| **AND Gates**        | `B004/B005/B006/B007`           | Various AND gate implementations                    |
+| **NAND Gates**       | `B008/B009/B010/B011`           | NAND gate implementations including edge-triggered. |
+| **Up/Down Counters** | `B012/B013/B014/B015/B016/B017` | Output behavior visualization.                      |
+| **Timer OFF Delays** | `B018/B019`                     | Timing functions (25s delay)                        |
+| **Output Coils**     | `Q1/Q2/Q3/Q4/Q5/Q6/Q7/Q8`       | Physical outputs connected to display counters.     |
 
 ---
 
@@ -54,8 +54,9 @@ The project demonstrates core AND gate principles through physical switches and 
 
 *Key Insight: NAND variants behave opposite to thier AND counterparts.*
 
-Note:
+Notes:
 - The up/down counters `B012-B017` attached to each output provide visual feedback of the output behavious.
+- The TOF timers `B018/B019` are used to hold the output pulses of the AND-Edge & NAND-Edge blocks for 25ms, otherwise the pulses may not be observable.
 
 ---
 
@@ -159,5 +160,6 @@ De Morgan's theorem helps simplify complex logic by flipping gates "inside out."
 | ↓         | 0  | 1  |    |
 | ↓         | 1  | 0  |    |
 | ↓         | 1  | 1  |    |
+
 
 *Control Bit: _____*
