@@ -30,23 +30,23 @@ The TDE Display F-Keys are used to select 'testing modes'.
 ## 🔌 Connection Guide
 
 ### **Built-In Digital I/O**
-IN1 → OUT1
-IN2 → OUT2
-IN3 → OUT3
-IN4 → OUT4
-IN5 → NC (Up/Down counter only)
-IN6 → NC (Up/Down counter only)
-IN7 → NC (Up/Down counter only)
-IN8 → NC (Up/Down counter only)
+- IN1 → OUT1
+- IN2 → OUT2
+- IN3 → OUT3
+- IN4 → OUT4
+- IN5 → NC (Up/Down counter only)
+- IN6 → NC (Up/Down counter only)
+- IN7 → NC (Up/Down counter only)
+- IN8 → NC (Up/Down counter only)
 
 ### **Expantion-Card Digital I/O**
-IN9  → OUT5
-IN10 → OUT6
-IN11 → OUT7
-IN12 → OUT8
+- IN9  → OUT5
+- IN10 → OUT6
+- IN11 → OUT7
+- IN12 → OUT8
 
 ### **Analog I/O**
-AI1(IN7) → OUT1
-AI2(IN8) → OUT2
-AI3(IN1) → OUT3
-AI4(IN2) → OUT4
+- AI1(IN7) → OUT1
+- AI2(IN8) → OUT2
+- AI3(IN1) → OUT3
+- AI4(IN2) → OUT4
