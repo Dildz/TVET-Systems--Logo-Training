@@ -22,7 +22,7 @@ Useful for:
 
 | Block Type          | Symbol ID                  | Purpose                                   |
 |---------------------|----------------------------|-------------------------------------------|
-| **Digital Inputs**  | `I1/I2/I3/I4`              | Switching inputs (NO contact)             |
+| **Digital Inputs**  | `I1/I2/I3`                 | Switching inputs (NO contact)             |
 | **Weekly Timers**   | `B001/B001/B003/B008/B011` | Schedule control for ringing of the bell. |
 | **OFF-Delay Timer** | `B006/B010`                | Bell ring duration (3 seconds)            |
 | **Logic Gates**     | `B004/B005/B009/B012`      | Condition checking for ringing the bell.  |
@@ -66,4 +66,5 @@ Useful for:
 - Test functionality allows for manual bell activation without changing schedule
 - 3-second bell duration for school start/end & break start/end times | 2-second bell duration for period start/end times
   -  this allows students to audibly differenciate periods rings from break start/end rings.
+
 - Special Friday schedule accommodates detention classes ending at 17:00
