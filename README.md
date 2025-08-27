@@ -24,3 +24,4 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
   - stairway_function_switching_circuit
 - school_bell_system
 - step_control_for_4_outputs
+- two-point_heating_control
