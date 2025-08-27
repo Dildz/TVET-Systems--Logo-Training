@@ -14,6 +14,7 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
   - Basic_IO_Control
   - E-Stop_Circuit
   - Understanding_Gates
+- automatic_feeders
 - basic_arithmetic_operations
 - controlling_two_outputs_with_one_pushbutton
 - interlocking_circuit
@@ -21,4 +22,5 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
   - 2-way_switching_circuit
   - 3-way_switching_circuit
   - stairway_function_switching_circuit
+- school_bell_system
 - step_control_for_4_outputs
