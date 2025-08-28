@@ -19,6 +19,7 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
 - boiler_sequence_control
 - controlling_two_outputs_with_one_pushbutton
 - interlocking_circuit
+- irrigation_system_for_greenhouse
 - light_switching_circuits
   - 2-way_switching_circuit
   - 3-way_switching_circuit
