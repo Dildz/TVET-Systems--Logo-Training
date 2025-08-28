@@ -16,6 +16,7 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
   - Understanding_Gates
 - automatic_feeders
 - basic_arithmetic_operations
+- boiler_sequence_control
 - controlling_two_outputs_with_one_pushbutton
 - interlocking_circuit
 - light_switching_circuits
