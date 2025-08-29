@@ -14,6 +14,7 @@ TVET Training Systems Siemens Logo!Soft Comfort v8.4 example projects
   - Basic_IO_Control
   - E-Stop_Circuit
   - Understanding_Gates
+- automatic_control_of_roller_door
 - automatic_feeders
 - basic_arithmetic_operations
 - boiler_sequence_control
